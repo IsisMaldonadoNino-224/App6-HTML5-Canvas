@@ -39,7 +39,7 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
 function addrect(){ //will be adding a rectangle inside canvas
-	var c = document.getElementById('myCanvas"); //makes the canvas a variable
+	var c = document.getElementById("myCanvas"); //makes the canvas a variable
 	var ctx = c.getContext("2d"); // acts like a pen on canvas
 	ctx.moveTo(10,10); // where rect starts
 	ctx.lineTo(210,10); // move right
@@ -50,9 +50,26 @@ function addrect(){ //will be adding a rectangle inside canvas
 
 function addname(){ //will add my name to the canvas
 	var c = document.getElementById("myCanvas"); //makes cavnas a variable
-	var ctx = c.getContext("2d');// acts like pen
+	var ctx = c.getContext("2d");// acts like pen
 	ctx.font = "30px Arial"; //is font size and style
 	ctx.fillText("isis", 10, 50); // writes my name and location
+}
+
+function addimage() { //will add image to canvas
+    var c = document.getElementById("myCanvas"); //makes canvas variable
+    var ctx = c.getContext("2d");
+    var img = new Image();
+    img.onload = function() {
+        ctx.drawImage(img, 10, 10, 100, 80);
+    };
+    img.src = "https://via.placeholder.com/100";
+}
+
+function clearcanvas() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    ctx.clearRect(0, 0, c.width, c.height);
 }
 </script> 
 
@@ -85,7 +102,7 @@ function addname(){ //will add my name to the canvas
 	
 <div id="content" class="w3-container"> <!--adding all buttons first since it is easier then functions, will come back and make sure they all pop up and will truobleshoot if needed-->
 	<p>
-		<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas> </p> <!--added canvas code from w3 schools-->
+		<canvas id="myCanvas" width="250" height="150" style="border:1px solid #000000;"></canvas> </p> <!--added canvas code from w3 schools-->
 	<p>
 		<a onclick="addrect();" class="w3-btn w3-black"> Add a Rectangle! </a> <!--button for adding a rectangle that connect to addrec function-->
 	</p>
