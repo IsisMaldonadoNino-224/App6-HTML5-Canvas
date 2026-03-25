@@ -47,6 +47,13 @@ function addrect(){ //will be adding a rectangle inside canvas
 	ctx.lineTo(10,110); // move left
 	ctx.lineTo(10,10); //line to origin
 	ctx.stroke(); } //makes line visible
+
+function addname(){ //will add my name to the canvas
+	var c = document.getElementById("myCanvas"); //makes cavnas a variable
+	var ctx = c.getContext("2d');// acts like pen
+	ctx.font = "30px Arial"; //is font size and style
+	ctx.fillText("isis", 10, 50); // writes my name and location
+}
 </script> 
 
 
