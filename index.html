@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Isis
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -52,7 +52,7 @@ function addname(){ //will add my name to the canvas
 	var c = document.getElementById("myCanvas"); //makes cavnas a variable
 	var ctx = c.getContext("2d");// acts like pen
 	ctx.font = "30px Arial"; //is font size and style
-	ctx.fillText("isis", 10, 50); // writes my name and location
+	ctx.fillText("Isis", 10, 50); // writes my name and location
 }
 
 function addimage() { //will add image to canvas
@@ -65,11 +65,11 @@ function addimage() { //will add image to canvas
     img.src = "download.jpeg"; //picture is image uploaded
 }
 
-function clearcanvas() {
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
+function clearcanvas() { //will clear canvas
+    var c = document.getElementById("myCanvas"); //makes the canvas variable
+    var ctx = c.getContext("2d"); //acts like a pen
 
-    ctx.clearRect(0, 0, c.width, c.height);
+    ctx.clearRect(0, 0, c.width, c.height); //clears the whole canvas
 }
 </script> 
 
@@ -97,7 +97,7 @@ function clearcanvas() {
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+	<h1>App6 HTML5 Canvas</h1>
 </div>
 	
 <div id="content" class="w3-container"> <!--adding all buttons first since it is easier then functions, will come back and make sure they all pop up and will truobleshoot if needed-->
@@ -107,13 +107,13 @@ function clearcanvas() {
 		<a onclick="addrect();" class="w3-btn w3-black"> Add a Rectangle! </a> <!--button for adding a rectangle that connect to addrec function-->
 	</p>
 	<p> 
-		<a onclick="addname();" class="w3-btn w3-black"> Add my Name! </a> <!--button for adding my name that connects to addname function-->
+		<a onclick="addname();" class="w3-btn w3-blue"> Add my Name! </a> <!--button for adding my name that connects to addname function-->
 	</p>
 	<p>
-		<a onclick="addimage();" class="w3-btn w3-black"> Add an Image! </a> <!--button for adding an image that connects to add image function-->
+		<a onclick="addimage();" class="w3-btn w3-red"> Add an Image! </a> <!--button for adding an image that connects to add image function-->
 	</p>
 	<p>
-		<a onclick="clearcanvas();" class="w3-btn w3-black"> Clear the Canvas! </a> <!--button to clear canvas that connects to clear canvas function-->
+		<a onclick="clearcanvas();" class="w3-btn w3-green"> Clear the Canvas! </a> <!--button to clear canvas that connects to clear canvas function-->
 	</p>
 
 	
