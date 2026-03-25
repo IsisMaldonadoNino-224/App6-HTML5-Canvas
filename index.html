@@ -58,11 +58,11 @@ function addname(){ //will add my name to the canvas
 function addimage() { //will add image to canvas
     var c = document.getElementById("myCanvas"); //makes canvas variable
     var ctx = c.getContext("2d");
-    var img = new Image();
+    var img = new Image(); //makes new image
     img.onload = function() {
-        ctx.drawImage(img, 10, 10, 100, 80);
+        ctx.drawImage(img, 10, 10, 100, 80); //where the image will be
     };
-    img.src = "https://via.placeholder.com/100";
+    img.src = "bevopic.jpg"; //picture is image uploaded
 }
 
 function clearcanvas() {
